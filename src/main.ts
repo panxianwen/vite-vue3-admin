@@ -5,6 +5,7 @@ import { store, key } from './store'
 import router from './router'
 import App from './App.vue'
 import './index.css'
+import './permission'
 
 const app = createApp(App)
 app.use(ElementPlus)

@@ -11,13 +11,19 @@ const routes: Array<RouteRecordRaw> = [
     path: '/about',
     name: 'About',
     component: () => import('../components/About.vue')
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue')
   }
 ]
 
 const WHITE_NAME_LIST = ['']
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  //history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('./'),
   routes: (routes as unknown) as RouteRecordRaw[],
   strict: true,
   scrollBehavior: () => ({ left: 0, top: 0 })
